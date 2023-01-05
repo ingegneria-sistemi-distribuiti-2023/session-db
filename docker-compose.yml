@@ -7,10 +7,10 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - '3306:3306'
+      - '43306:3306'
     expose:
-      # Opens port 3306 on the container
-      - '3306'
+      # Opens port 43306 on the container
+      - '43306'
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: sessiondb
@@ -23,9 +23,9 @@ services:
       timeout: 5s
       retries: 55
     networks:
-      - session-network
+      - session-db-network
     container_name: session_db
 
 networks: 
-  session-network:
-    name: session-network
+  session-db-network:
+    name: session-db-network
