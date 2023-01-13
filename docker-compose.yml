@@ -5,7 +5,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    restart: always
+    restart: unless-stopped
     ports:
       - '43306:3306'
     expose:
@@ -24,7 +24,7 @@ services:
       retries: 55
     networks:
       - session-db-network
-    container_name: session_db
+    container_name: session-db
 
 networks: 
   session-db-network:
