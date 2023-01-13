@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `sessiondb`.`session` (
     `session_id` VARCHAR(255) NULL,
     `start_time` TIMESTAMP NOT NULL,
     `end_time` TIMESTAMP NULL DEFAULT NULL,
-    CONSTRAINT `team_PK` PRIMARY KEY (`id`))
+    CONSTRAINT `session_PK` PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb3;
 
