@@ -2,9 +2,10 @@ version: '3.9'
 
 services:  
   session-db:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    # build: 
+    #   context: .
+    #   dockerfile: Dockerfile
+    image: khalld/session-db:latest
     restart: unless-stopped
     ports:
       - '43306:3306'
